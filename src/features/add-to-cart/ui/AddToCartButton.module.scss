@@ -1,0 +1,19 @@
+.button {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #55d9e2;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button:active {
+  opacity: 0.7;
+}

@@ -1,0 +1,58 @@
+.form {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #55d9e2;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.input:focus {
+  outline: 2px solid #999;
+  outline-offset: 1px;
+}
+
+.submitButton,
+.clearButton {
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.submitButton {
+  border: none;
+  background-color: #55d9e2;
+  color: #000000;
+}
+
+.clearButton {
+  border: 1px solid #ccc;
+  background-color: #55d9e2;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-wrap: wrap;
+  }
+
+  .input {
+    flex-basis: 100%;
+  }
+}

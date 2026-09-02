@@ -1,0 +1,57 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.title {
+  margin: 0 0 32px;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.empty {
+  padding: 48px 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: #55d9e2;
+  text-align: center;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 24px;
+}
+
+.emptyDescription {
+  margin: 12px 0 0;
+  color: #666;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: center;
+}
+
+.items {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .cart {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

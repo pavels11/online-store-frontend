@@ -1,0 +1,31 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.button {
+  min-width: 100px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #55d9e2;
+  font: inherit;
+}
+
+.button:hover:not(:disabled) {
+  background-color: rgb(186, 236, 244);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.currentPage {
+  min-width: 140px;
+  text-align: center;
+}

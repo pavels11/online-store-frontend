@@ -1,0 +1,19 @@
+.details {
+  display: grid;
+  gap: 16px;
+  margin: 32px 0 0;
+}
+
+.details div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+}
+
+.details dt {
+  font-weight: 600;
+}
+
+.details dd {
+  margin: 0;
+}
