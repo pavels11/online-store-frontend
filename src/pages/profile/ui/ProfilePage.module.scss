@@ -1,0 +1,58 @@
+.page {
+  padding: 48px 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 0 32px;
+  font-size: 32px;
+}
+
+.profile {
+  display: flex;
+  gap: 48px;
+  padding: 32px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #55d9e2;
+}
+
+.avatarWrapper {
+  flex-shrink: 0;
+}
+
+.avatar {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 500;
+}

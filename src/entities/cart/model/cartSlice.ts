@@ -2,11 +2,10 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 import type { Product } from '../../product/model/types';
 
+import { loadCart } from '../lib/cartStorage';
 import type { CartState } from './types';
 
-const initialState: CartState = {
-  items: [],
-};
+const initialState: CartState = loadCart();
 
 const cartSlice = createSlice({
   name: 'cart',

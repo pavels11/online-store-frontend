@@ -1,4 +1,4 @@
-import type { CartState } from './types';
+import type { CartState } from '../model/types';
 
 const CART_STORAGE_KEY = 'online-store-cart';
 
