@@ -1,6 +1,11 @@
 import QuantityControl from '../../../features/change-cart-quantity/ui/QuantityControl';
 import RemoveFromCartButton from '../../../features/remove-from-cart/ui/RemoveFromCartButton';
 
+import {
+  getLocalProductImage,
+  handleProductImageError,
+} from '../../product/lib/getLocalProductImage';
+
 import type { CartItem as CartItemType } from '../model/types';
 
 import styles from './CartItem.module.scss';
@@ -14,7 +19,12 @@ function CartItem({ item }: CartItemProps) {
 
   return (
     <article className={styles.item}>
-      <img className={styles.image} src={item.thumbnail} alt={item.title} />
+      <img
+        className={styles.image}
+        src={getLocalProductImage(item.thumbnail)}
+        alt={item.title}
+        onError={handleProductImageError}
+      />
 
       <div className={styles.content}>
         <h2 className={styles.title}>{item.title}</h2>

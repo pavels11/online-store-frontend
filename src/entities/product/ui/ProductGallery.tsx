@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { getLocalProductImage, handleProductImageError } from '../lib/getLocalProductImage';
+
 import styles from './ProductGallery.module.scss';
 
 interface ProductGalleryProps {
@@ -8,30 +10,37 @@ interface ProductGalleryProps {
 }
 
 function ProductGallery({ images, title }: ProductGalleryProps) {
-  const [selectedImage, setSelectedImage] = useState(images[0] ?? '');
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   if (images.length === 0) {
     return <div className={styles.empty}>Изображение отсутствует</div>;
   }
 
+  const selectedImage = images[selectedIndex] ?? images[0];
+
   return (
     <div className={styles.gallery}>
       <div className={styles.mainImageWrapper}>
-        <img className={styles.mainImage} src={selectedImage} alt={title} />
+        <img
+          className={styles.mainImage}
+          src={getLocalProductImage(selectedImage)}
+          alt={title}
+          onError={handleProductImageError}
+        />
       </div>
 
       {images.length > 1 && (
         <div className={styles.thumbnails}>
-          {images.map((image) => (
+          {images.map((image, index) => (
             <button
               key={image}
-              className={`${styles.thumbnail} ${image === selectedImage ? styles.active : ''}`}
+              className={`${styles.thumbnail} ${index === selectedIndex ? styles.active : ''}`}
               type="button"
-              onClick={() => setSelectedImage(image)}
+              onClick={() => setSelectedIndex(index)}
               aria-label={`Показать изображение товара: ${title}`}
-              aria-pressed={image === selectedImage}
+              aria-pressed={index === selectedIndex}
             >
-              <img src={image} alt="" />
+              <img src={getLocalProductImage(image)} alt="" onError={handleProductImageError} />
             </button>
           ))}
         </div>

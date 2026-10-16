@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 
 import AddToCartButton from '../../../features/add-to-cart/ui/AddToCartButton';
+import { getLocalProductImage, handleProductImageError } from '../lib/getLocalProductImage';
 import type { Product } from '../model/types';
 
 import styles from './ProductCard.module.scss';
@@ -13,7 +14,12 @@ function ProductCard({ product }: ProductCardProps) {
   return (
     <article className={styles.card}>
       <Link className={styles.link} to={`/product/${product.id}`}>
-        <img className={styles.image} src={product.thumbnail} alt={product.title} />
+        <img
+          className={styles.image}
+          src={getLocalProductImage(product.thumbnail)}
+          alt={product.title}
+          onError={handleProductImageError}
+        />
 
         <div className={styles.content}>
           <h2 className={styles.title}>{product.title}</h2>
