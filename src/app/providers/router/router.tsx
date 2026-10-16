@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import { createHashRouter } from 'react-router';
 
 import AppLayout from '../../../widgets/app-layout/ui/AppLayout';
 import CartPage from '../../../pages/cart/ui/CartPage';
@@ -11,7 +11,7 @@ import ProfilePage from '../../../pages/profile/ui/ProfilePage';
 
 import ProtectedRoute from './ProtectedRoute';
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     element: <AppLayout />,
     children: [
