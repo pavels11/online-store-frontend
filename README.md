@@ -2,8 +2,6 @@
 
 Online store web application built with React and TypeScript.
 
-**Live Demo:** https://pavels11.github.io/online-store-frontend/
-
 ## Features
 
 - Product catalog with search, filtering, sorting, and pagination
