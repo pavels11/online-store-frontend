@@ -4,7 +4,7 @@ import styles from './HomePage.module.scss';
 
 function HomePage() {
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <p className={styles.logo}>Интернет-магазин</p>
@@ -16,7 +16,7 @@ function HomePage() {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

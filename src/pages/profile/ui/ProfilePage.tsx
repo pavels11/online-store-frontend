@@ -11,7 +11,7 @@ function ProfilePage() {
   }
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <section className={styles.container}>
         <h1 className={styles.title}>Профиль</h1>
 
@@ -52,7 +52,7 @@ function ProfilePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

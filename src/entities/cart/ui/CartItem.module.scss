@@ -58,3 +58,27 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 320px) {
+  .item {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .content {
+    min-width: 0;
+  }
+
+  .title,
+  .price,
+  .itemTotal {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}

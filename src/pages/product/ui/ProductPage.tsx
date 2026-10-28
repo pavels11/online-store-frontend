@@ -9,6 +9,7 @@ import ProductPrice from '../../../entities/product/ui/ProductPrice';
 import ProductRating from '../../../entities/product/ui/ProductRating';
 import AddToCartButton from '../../../features/add-to-cart/ui/AddToCartButton';
 import ErrorMessage from '../../../shared/ui/ErrorMessage/ErrorMessage';
+import Loader from '../../../shared/ui/Loader/Loader';
 
 import styles from './ProductPage.module.scss';
 
@@ -30,7 +31,11 @@ function ProductPage() {
   }
 
   if (isPending) {
-    return <p>Загрузка товара...</p>;
+    return (
+      <div className={styles.loading}>
+        <Loader label="Загрузка товара..." />
+      </div>
+    );
   }
 
   if (isError) {
@@ -42,7 +47,7 @@ function ProductPage() {
   }
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <Link className={styles.backLink} to="/catalog">
         ← Вернуться в каталог
       </Link>
@@ -64,7 +69,7 @@ function ProductPage() {
           <AddToCartButton product={data} />
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 

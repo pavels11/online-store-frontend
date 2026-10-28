@@ -29,3 +29,35 @@
   min-width: 140px;
   text-align: center;
 }
+
+@media (max-width: 400px) {
+  .pagination {
+    gap: 8px;
+  }
+
+  .button {
+    min-width: 0;
+    padding: 8px;
+  }
+
+  .currentPage {
+    min-width: 0;
+    flex: 1;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 300px) {
+  .pagination {
+    gap: 4px;
+  }
+
+  .button {
+    padding: 8px 6px;
+    font-size: 14px;
+  }
+
+  .currentPage {
+    font-size: 12px;
+  }
+}

@@ -55,7 +55,7 @@ function LoginPage() {
   const isLoading = status === 'loading';
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <section className={styles.formWrapper}>
         <div className={styles.formContainer}>
           <h1 className={styles.title}>Вход</h1>
@@ -105,7 +105,7 @@ function LoginPage() {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

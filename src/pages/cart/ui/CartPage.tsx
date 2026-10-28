@@ -9,7 +9,7 @@ function CartPage() {
   const items = useAppSelector(selectCartItems);
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <h1 className={styles.title}>Корзина</h1>
 
       {items.length === 0 ? (
@@ -31,7 +31,7 @@ function CartPage() {
           <CartSummary />
         </div>
       )}
-    </main>
+    </div>
   );
 }
 

@@ -9,7 +9,7 @@ import NotFoundPage from '../../../pages/not-found/ui/NotFoundPage';
 import ProductPage from '../../../pages/product/ui/ProductPage';
 import ProfilePage from '../../../pages/profile/ui/ProfilePage';
 
-import ProtectedRoute from './ProtectedRoute';
+import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
 
 export const router = createHashRouter([
   {

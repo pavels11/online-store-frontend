@@ -82,7 +82,7 @@ function CatalogPage() {
   };
 
   return (
-    <main className={styles.page}>
+    <div className={styles.page}>
       <h1 className={styles.title}>
         {catalogParams.search ? `Результаты поиска: «${catalogParams.search}»` : 'Каталог товаров'}
       </h1>
@@ -114,7 +114,7 @@ function CatalogPage() {
         order={catalogParams.order}
         onPageChange={handlePageChange}
       />
-    </main>
+    </div>
   );
 }
 

@@ -56,3 +56,49 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 16px;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 16px;
+  }
+
+  .info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .value {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 320px) {
+  .page {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .profile {
+    padding: 16px 12px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+}
